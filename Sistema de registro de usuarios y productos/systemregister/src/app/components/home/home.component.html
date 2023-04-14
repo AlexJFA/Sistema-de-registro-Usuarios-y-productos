@@ -1,0 +1,62 @@
+<!-- login -->
+
+<div class="container-fluid"    *ngIf="conditionTemplate">
+  <h1 class="text-center mt-5"><strong>Login</strong></h1>
+
+  <form class="container col-5">
+    <div class="mb-3">
+      <label for="Email" class="form-label"
+        >Dirección de correo electronico</label
+      >
+      <input
+        [(ngModel)]="userAdmin.email"
+        name="email"
+        type="email"
+        class="form-control"
+        id="Email"
+        aria-describedby="emailHelp"
+        placeholder="ejemplo@gmail.com"
+      />
+      <div id="emailHelp" class="form-text">
+        Nunca compatiremos tus datos personales.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Clave</label>
+      <input
+        [(ngModel)]="userAdmin.pass"
+        name="password"
+        type="password"
+        class="form-control"
+        id="password"
+        placeholder="password"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-dark" (click)="login()">Login</button>
+  </form>
+
+  <div class="container mt-5 text-center">
+    <h2><strong> Credenciales de acceso</strong></h2>
+    <h4>alexander@gmail.com</h4>
+    <h4>clave: 12345</h4>
+    <h4>katherin@gmail.com</h4>
+    <h4>clave: 12345</h4>
+  </div>
+
+</div>
+
+<!-- logout -->
+
+<div
+*ngIf="!conditionTemplate"
+  class="container-fluid row d-flex justify-content-center mt-5 aling-items-center text-center"
+>
+<div class="container">
+
+  <h2>En ente momento te encuentras con una sesión activa {{userAdmin.email | titlecase }}  </h2>
+</div>
+  <button type="submit" class="btn btn-dark col-5 p-3" (click)="logout()">
+    Cerrar sesión 
+  </button>
+</div>

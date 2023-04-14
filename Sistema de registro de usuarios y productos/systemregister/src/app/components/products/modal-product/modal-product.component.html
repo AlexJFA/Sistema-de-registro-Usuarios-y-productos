@@ -1,0 +1,116 @@
+<!-- crear usuario -->
+<!-- solo se mostratra si la bariable opedP es true -->
+
+<form class="container my-3" action="crear" method="POST" *ngIf="openP">
+  <div class="d-flex row">
+    <div class="mb-3 col">
+      <label for="nombre" class="form-label">
+        <strong>Nombre</strong>
+      </label>
+      <input
+        name="nombre"
+        [(ngModel)]="product.name"
+        type="text"
+        class="form-control"
+        id="nombre"
+        placeholder="Ingresa nombre de producto"
+      />
+    </div>
+    <div class="mb-3 col">
+      <label for="creador" class="form-label"><strong>Creador</strong></label>
+      <input
+        name="creador"
+        [(ngModel)]="product.creator"
+        type="number"
+        class="form-control"
+        id="creador"
+        placeholder="Ingresa id de creador"
+      />
+    </div>
+  </div>
+
+  <div class="col-12">
+    <button type="button" class="btn btn-dark" (click)="agg()">
+      Agregar
+    </button>
+  </div>
+</form>
+
+<!-- editar producto -->
+<!-- solo se mostratra si la bariable opedE es true -->
+
+<form class="container my-3" action="crear" method="POST" *ngIf="openE">
+  <div class="d-flex row">
+    <div class="mb-3 col-3">
+      <label for="id" class="form-label"
+        ><strong>ID de producto </strong></label
+      >
+      <input
+        name="id"
+        [(ngModel)]="product.id"
+        type="text"
+        class="form-control"
+        id="id"
+        placeholder="Ingresa Id de producto"
+      />
+    </div>
+
+    <div class="mb-3 col">
+      <label for="nombre" class="form-label">
+        <strong>Nombre</strong>
+      </label>
+      <input
+        name="nombre"
+        [(ngModel)]="product.name"
+        type="text"
+        class="form-control"
+        id="nombre"
+        placeholder="Ingresa nombre de producto"
+      />
+    </div>
+    <div class="mb-3 col">
+      <label for="creador" class="form-label"><strong>Creador</strong></label>
+      <input
+        name="creador"
+        [(ngModel)]="product.creator"
+        type="text"
+        class="form-control"
+        id="creador"
+        placeholder="Ingresa id de creador"
+      />
+    </div>
+  </div>
+
+  <div class="col-12">
+    <button type="button" class="btn btn-dark" (click)="edit()">
+      Editar
+    </button>
+  </div>
+</form>
+
+<!-- eliminar producto -->
+<!-- solo se mostratra si la bariable opedD es true -->
+
+<form class="container my-3" action="crear" method="POST" *ngIf="openD">
+  <div class="d-flex row">
+    <div class="mb-3 col-3">
+      <label for="id" class="form-label"
+        ><strong>ID de producto </strong></label
+      >
+      <input
+        name="id"
+        [(ngModel)]="product.id"
+        type="text"
+        class="form-control"
+        id="id"
+        placeholder="Ingresa Id de producto"
+      />
+    </div>
+
+    <div class="col-12">
+      <button type="button" class="btn btn-dark" (click)="delete()">
+        Eliminar
+      </button>
+    </div>
+  </div>
+</form>

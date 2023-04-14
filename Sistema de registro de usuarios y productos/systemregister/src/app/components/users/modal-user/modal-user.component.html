@@ -1,0 +1,132 @@
+<!-- crear usuarios  -->
+<!-- solo se mostrara si la variable openU es  true -->
+
+<form class="container my-3" method="post" *ngIf="openU">
+  <div class="d-flex row">
+    <div class="mb-3 col">
+      <label for="nombre" class="form-label">
+        <strong>Nombre</strong>
+      </label>
+      <input
+        name="nombre"
+        [(ngModel)]="user.name"
+        type="text"
+        class="form-control"
+        id="nombre"
+        placeholder="Ingresa tu nombre"
+      />
+    </div>
+    <div class="mb-3 col">
+      <label for="edad" class="form-label"><strong>Edad</strong></label>
+      <input
+        name="edad"
+        [(ngModel)]="user.age"
+        type="number"
+        class="form-control"
+        id="edad"
+        placeholder="Ingresa tu edad"
+      />
+    </div>
+    <div class="mb-3 col">
+      <label for="sueldo" class="form-label"><strong>Sueldo</strong></label>
+      <input
+        name="sueldo"
+        [(ngModel)]="user.salary"
+        type="number"
+        class="form-control"
+        id="sueldo"
+        placeholder="Ingresa tu sueldo"
+      />
+    </div>
+  </div>
+
+  <div class="col-12">
+    <button type="submit" class="btn btn-dark" (click)="agg()">
+      Agregar
+    </button>
+  </div>
+</form>
+
+<!-- editar usuario -->
+<!-- solo se mostrara si la variable openE es  true -->
+<form class="container my-3" method="post" *ngIf="openE">
+  <div class="d-flex row">
+    <div class="mb-3 col-3">
+      <label for="id" class="form-label"><strong>ID de Usuario </strong></label>
+      <input
+        name="id"
+        [(ngModel)]="user.id"
+        type="text"
+        class="form-control"
+        id="id"
+        placeholder="Ingresa Id de usuario"
+      />
+    </div>
+
+    <div class="mb-3 col">
+      <label for="nombre" class="form-label">
+        <strong>Nombre</strong>
+      </label>
+      <input
+        name="nombre"
+        [(ngModel)]="user.name"
+        type="text"
+        class="form-control"
+        id="nombre"
+        placeholder="Ingresa tu nombre"
+      />
+    </div>
+    <div class="mb-3 col">
+      <label for="edad" class="form-label"><strong>Edad</strong></label>
+      <input
+        name="edad"
+        [(ngModel)]="user.age"
+        type="number"
+        class="form-control"
+        id="edad"
+        placeholder="Ingresa tu edad"
+      />
+    </div>
+    <div class="mb-3 col">
+      <label for="sueldo" class="form-label"><strong>Sueldo</strong></label>
+      <input
+        name="sueldo"
+        [(ngModel)]="user.salary"
+        type="number"
+        class="form-control"
+        id="sueldo"
+        placeholder="Ingresa tu sueldo"
+      />
+    </div>
+  </div>
+
+  <div class="col-12">
+    <button type="submit" class="btn btn-dark" (click)="edit()">
+      Editar
+    </button>
+  </div>
+</form>
+
+<!-- eliminar usuario -->
+<!-- solo se mostrara si la variable openD es  true -->
+<form class="container my-3" method="post" *ngIf="openD">
+  <div class="d-flex row">
+    <div class="mb-3 col-3">
+      <label for="id" class="form-label"><strong>ID de Usuario </strong></label>
+      <input
+        name="id"
+        [(ngModel)]="user.id"
+        type="text"
+        class="form-control"
+        id="id"
+        placeholder="Ingresa Id de usuario"
+      />
+    </div>
+  </div>
+
+  <div class="col-12">
+    <button type="submit" class="btn btn-dark" (click)="delete()">
+      Eliminar
+    </button>
+  </div>
+</form>

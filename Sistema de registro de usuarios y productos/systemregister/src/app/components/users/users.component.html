@@ -1,0 +1,50 @@
+<h1 class="text-center mt-3 mb-3">Lista de Usuarios</h1>
+
+<div class="container d-flex justify-content-start my-3">
+  <button type="button" class="btn btn-outline-dark mx-2" (click)="agg()">
+    <i class="bi bi-plus-square-fill"></i>
+    Agregar
+  </button>
+
+  <button type="button" class="btn btn-outline-dark mx-2" (click)="edit()">
+    <i class="bi bi-pencil-square"></i>
+    Editar
+  </button>
+
+  <button type="button" class="btn btn-outline-dark mx-2" (click)="delete()">
+    <i class="bi bi-dash-circle-fill"></i>
+    Eliminar
+  </button>
+</div>
+
+<!-- modal del crud de  Usuario  -->
+<div >
+  <app-modal-user
+    [openU]="openU"
+    [openE]="openE"
+    [openD]="openD"
+    *ngIf="openU || openE || openD"
+  ></app-modal-user>
+</div>
+
+<div class="container text-center">
+  <table class="table table-secondary table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Edad</th>
+        <th scope="col">Sueldo</th>
+      </tr>
+    </thead>
+
+    <tbody *ngFor="let item of users">
+      <tr>
+        <th scope="row">{{ item.id }}</th>
+        <td type="text">{{ item.nombre }}</td>
+        <td type="number">{{ item.edad }}</td>
+        <td type="number">{{ item.sueldo }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,49 @@
+<h1 class="text-center mt-3 mb-3">Lista de productos</h1>
+
+<!-- botones -->
+<div class="container d-flex justify-content-start my-3">
+  <button type="button" class="btn btn-outline-dark mx-2" (click)="agg()">
+    <i class="bi bi-plus-square-fill"></i>
+    Agregar
+  </button>
+
+  <button type="button" class="btn btn-outline-dark mx-2" (click)="edit()">
+    <i class="bi bi-pencil-square"></i>
+    Editar
+  </button>
+
+  <button type="button" class="btn btn-outline-dark mx-2" (click)="delete()">
+    <i class="bi bi-dash-circle-fill"></i>
+    Eliminar
+  </button>
+</div>
+
+<!-- modal del crud de productos muestra el modal depende que variable esea verdadera -->
+<div>
+  <app-modal-product
+    [openP]="openP"
+    [openE]="openE"
+    [openD]="openD"
+    *ngIf="openP || openE || openD"
+  ></app-modal-product>
+</div>
+
+<!-- tabla -->
+<div class="container text-center">
+  <table class="table table-secondary table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Creador</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of products">
+      <tr>
+        <th scope="row">{{ item.id }}</th>
+        <td type="text">{{ item.nombre }}</td>
+        <td type="number">{{ item.creador }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
