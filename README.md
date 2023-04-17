@@ -1,5 +1,97 @@
 # Sistema de Registros
 
+
+* ---------------------------------------------------------- Spanish -------------------------------------------------
+
+# Sistema de Registros
+
+Este proyecto se generó con [Angular CLI](https://github.com/angular/angular-cli) versión 15.1.6.
+
+es un proyecto donde se implementa un front-end con Angular y un back-end con NodeJS, en el cual extraemos datos de una base de datos en msql,
+y para cifrar los datos de la respuesta del servidor usamos JWT creando un token de autenticación.
+
+# Interfaz:
+implementación de formularios con dataBinding, a través de un modelo para crear el usuario que enviaremos a través de una solicitud posterior al back-ent,
+enrutamiento con enrutamiento protegido por guardias,
+modales de material angular, bootstrap y sweetalert,
+transferencia de datos de padre a hijo,
+servicios donde se implementan las solicitudes de (CRUD),
+almacenamiento del token de autenticación en localStorage para el
+la sesión activa del usuario.
+esta aplicación se ejecuta en la ruta: http://localhost:4200/
+
+# back-end:
+implementación express, middleware, cors, JWT
+creando así un modelo de vista de controlador en el que las rutas están en un archivo "router.ts" separado de la lógica de los métodos que hacen las consultas a la base de datos los cuales se llaman "connectionBCT", "controller", "controllerJWT"
+esta API se ejecuta en la ruta: http://localhost:3000/
+
+## ¿Qué necesito para ejecutar el proyecto?
+
+* Este sistema consume una api desarrollada en nodeJS la cual realiza consultas en una base de datos en Msql.
+* Por lo tanto, para poder ver el funcionamiento completo de la aplicación, debe crear una base de datos en Msql.
+* Una vez que haya creado su base de datos, debe ir al archivo connectionBCT.js en este hay un Objeto llamado BCT, allí debe ingresar el nombre y las credenciales para su conexión.
+* en tu base de datos debes crear 3 tablas
+   - usuarios.
+   - producto.
+   - administrador de usuarios.
+*users tiene las siguientes columnas: id(INT), nombre(VARCHAR), edad(INT), sueldo(FLOAT).
+* producto tiene las siguientes columnas: id(INT), nombre(VARCHAR), creador(INT)
+* usersAdmin tiene las siguientes columnas: id(INT), email(VARCHAR), pass(VARCHER)
+
+
+## dependencias front-end angular
+-oreja
+-bootstrap-iconos
+-dulcealerta2
+-material
+
+## dependencias back-end nodeJS
+"analizador de cuerpo"
+"corazón"
+"expresar"
+"express-mysql-conexión"
+"jsonwebtoken"
+"mysql"
+"nodemonio"
+
+
+## Servidor de desarrollo
+
+Ejecute `ng serve` para un servidor de desarrollo. Navegue a `http://localhost:4200/`. La aplicación se recargará automáticamente si cambia alguno de los archivos de origen.
+
+## Andamiaje de código
+
+Ejecute `ng generar componente nombre-componente` para generar un nuevo componente. También puede usar `ng generar directiva|tubería|servicio|clase|guardia|interfaz|enum|módulo`.
+
+
+## Construir
+
+Ejecute `ng build` para compilar el proyecto. Los artefactos de compilación se almacenarán en el directorio `dist/`.
+
+## Ejecutando pruebas unitarias
+
+Ejecute `ng test` para ejecutar las pruebas unitarias a través de [Karma](https://karma-runner.github.io).
+
+## Ejecutar pruebas de extremo a extremo
+
+Ejecute `ng e2e` para ejecutar las pruebas de extremo a extremo a través de una plataforma de su elección. Para usar este comando, primero debe agregar un paquete que implemente capacidades de prueba de un extremo a otro.
+
+## Más ayuda
+
+Para obtener más ayuda sobre Angular CLI, use `ng help` o consulte la página [Descripción general y referencia de comandos de Angular CLI] (https://angular.io/cli).
+
+
+
+
+
+
+
+
+
+
+
+* ---------------------------------------------------------- Ingles -------------------------------------------------
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
 
 is a project where a front-end with Angular and a back-end with NodeJS are implemented, in which we extract data from a database in msql,
