@@ -21,7 +21,7 @@ const conectionBCT = mysql.createConnection(BCT);
 // nos conectamos a la base de datos
 conectionBCT.connect((error, result) => {
   if (error) {
-    return "error en la conexion a la BCT";
+    return console.log("Error en la conexion a la BCT se accedera al MOCK");
   }
   return console.log("conexion exitosa a la BCT ");
 });
