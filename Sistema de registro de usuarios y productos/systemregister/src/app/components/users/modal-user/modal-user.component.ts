@@ -21,16 +21,12 @@ export class ModalUserComponent {
   }
 
   agg() {
-    this._service.createUser(this.user).subscribe((data) => {
-      console.log(data);
-    });
+    this._service.createUser(this.user).subscribe();
     location.reload();
   }
 
   edit() {
-    this._service.updateUser(this.user.id, this.user).subscribe((data) => {
-      console.log(data);
-    });
+    this._service.updateUser(this.user.id, this.user).subscribe();
 
     location.reload();
   }

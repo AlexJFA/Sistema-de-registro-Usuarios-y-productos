@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
+import { Subscription, async } from 'rxjs';
+import { productModel } from 'src/app/models/productModel';
 import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
@@ -7,15 +9,21 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent implements OnInit {
-  public products: any = [];
+  // public products: any = [];
   public openP: boolean = false;
   public openE: boolean = false;
   public openD: boolean = false;
 
+  public products: any = [];
+
   constructor(private service: ProductsService) {}
 
   ngOnInit(): void {
-    this.service.getAllProducts().subscribe((data) => {
+    this.getProducts();
+  }
+
+  getProducts() {
+    this.service.getAllProducts().subscribe((data: any) => {
       this.products = data;
     });
   }

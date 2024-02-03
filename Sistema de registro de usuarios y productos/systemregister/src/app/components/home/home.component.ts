@@ -24,6 +24,10 @@ export class HomeComponent implements OnInit {
   public error!: string;
   public conditionTemplate!: boolean;
 
+  public usersLocals={
+    
+  }
+
   constructor(
     public dialog: MatDialog,
     private _authService: AuthService,

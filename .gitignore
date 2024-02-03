@@ -7,8 +7,6 @@
 /bazel-out
 
 # Node
-/Sistema de registro de usuarios y productos/API/node_modules
-/Sistema de registro de usuarios y productos/systemregister/node_modules
 /node_modules
 npm-debug.log
 yarn-error.log

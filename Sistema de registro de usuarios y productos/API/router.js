@@ -14,6 +14,7 @@ router.post("/users/Authorization", controladorJWT.authorization);
 // -------  traer usuarios -------
 
 router.get("/users", controlador.getAllUsers);
+// router.get("/users", controladorJWT.authorization, controlador.getAllUsers);
 
 // ----- traer solo 1 usuario ------
 
@@ -25,7 +26,7 @@ router.post("/users", controlador.createUser);
 
 // -------- actualizar usuario ----------
 
-router.put("/users/:id", controlador.updateUser);
+router.put("/users/:id?", controlador.updateUser);
 
 // ----   Eliminar  usuario -------
 
@@ -44,10 +45,10 @@ router.post("/products", controlador.createProduct);
 
 //  ------ actualizar producto --------
 
-router.put("/products/:id", controlador.updateProduct);
+router.put("/products/:id?", controlador.updateProduct);
 
 //  ------- Eliminar  producto -----
 // definimos la ruta para la captura del id usando /:id
-router.delete("/products/:id", controlador.deleteProduct);
+router.delete("/products/:id?", controlador.deleteProduct);
 
 module.exports = router;

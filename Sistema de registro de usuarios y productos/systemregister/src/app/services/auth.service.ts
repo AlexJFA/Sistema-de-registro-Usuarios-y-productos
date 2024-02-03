@@ -11,7 +11,7 @@ export class AuthService {
   constructor(private _http: HttpClient) {}
 
   gToken(user: any) {
-    // enaviamos el usuario a traves de un post y este nos retorna un token, cuando valida que el usuario existe en al bct.
+    // enviamos el usuario a traves de un post y este nos retorna un token, cuando valida que el usuario existe en al bct.
     return this._http.post(this.url, user);
   }
 }
